@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap');
+
+/* Scrollbar utilities */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Marquee animation */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee-scroll 30s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Animated gradient text */
+@keyframes gradient-flow {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+.gradient-flow {
+  background-size: 300% 300%;
+  animation: gradient-flow 5s ease infinite;
+}
+
+/* Preloader bar fill */
+@keyframes bar-fill {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+.bar-fill {
+  animation: bar-fill 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(91, 140, 255, 0.3);
+  color: #fff;
+}
