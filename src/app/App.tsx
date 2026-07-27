@@ -35,6 +35,7 @@ import {
 import Lenis from "lenis";
 import * as THREE from "three";
 import monu from "./assets/monu.png";
+import resume from "./assets/monuResume.pdf";
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -709,7 +710,7 @@ function Hero() {
                 background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.12)",
               }}
-              href="./assets/monuResume.pdf"
+             href={resume}
             >
               <Download size={15} />
               Download Resume
@@ -2066,7 +2067,7 @@ function CollabCTA() {
                 background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.12)",
               }}
-              href="./assets/monuResume.pdf"
+              href={resume}
               target="_blank"
             >
               <Download size={16} /> Download CV
