@@ -34,6 +34,7 @@ import {
 } from "lucide-react";
 import Lenis from "lenis";
 import * as THREE from "three";
+import monu from "./assets/monu.png";
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -662,7 +663,7 @@ function Hero() {
               />
             </span>
             <span className="text-xs tracking-[0.2em] uppercase text-blue-400 font-medium">
-              Available for freelance
+              Available for Work
             </span>
           </motion.div>
 
@@ -751,7 +752,7 @@ function Hero() {
               border: "1px solid rgba(91,140,255,0.25)",
             }}
           >
-            ⚛ React Developer
+             Angular Developer
           </motion.div>
 
           <motion.div
@@ -764,7 +765,7 @@ function Hero() {
               border: "1px solid rgba(124,58,237,0.3)",
             }}
           >
-            🎨 UI Designer
+            🎨 UI/UX Designer
           </motion.div>
 
           <motion.div
@@ -777,7 +778,7 @@ function Hero() {
               border: "1px solid rgba(0,229,255,0.2)",
             }}
           >
-            🟢 Node.js
+            ⚛ React Developer
           </motion.div>
         </motion.div>
       </motion.div>
@@ -847,7 +848,7 @@ function About() {
           >
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-slate-900">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop&auto=format"
+                src={monu}
                 alt="Monu Sharma"
                 className="w-full h-full object-cover"
               />
@@ -1601,10 +1602,10 @@ function Contact() {
             className="lg:col-span-2 space-y-6"
           >
             {[
-              { icon: Mail, label: "Email", value: "monu@example.com", href: "mailto:monu@example.com" },
-              { icon: Linkedin, label: "LinkedIn", value: "Monu Sharma", href: "#" },
-              { icon: Github, label: "GitHub", value: "github.com/monu", href: "#" },
-              { icon: MapPin, label: "Location", value: "India 🇮🇳", href: undefined },
+              { icon: Mail, label: "Email", value: "sharmamonu42969@gmail.com", href: "sharmamoun42969@gmail.com" },
+              { icon: Linkedin, label: "LinkedIn", value: "Monu Sharma", href: "https://www.linkedin.com/in/monusharma/" },
+              { icon: Github, label: "GitHub", value: "m0nusharma", href: "https://github.com/m0nusharma" },
+              { icon: MapPin, label: "Chandigarh", value: "India 🇮🇳", href: undefined },
             ].map(({ icon: Icon, label, value, href }) => (
               <div key={label} className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
@@ -1714,9 +1715,9 @@ function Contact() {
 
 function Footer() {
   const socials = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:monu@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com/m0nusharma", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/monusharma/", label: "LinkedIn" },
+    { icon: Mail, href: "sharmamonu42969@gmail.com", label: "Email" },
   ];
 
   return (
