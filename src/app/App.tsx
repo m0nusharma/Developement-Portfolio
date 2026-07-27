@@ -709,7 +709,7 @@ function Hero() {
                 background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.12)",
               }}
-              href="#"
+              href="./assets/monuResume.pdf"
             >
               <Download size={15} />
               Download Resume
@@ -2066,7 +2066,7 @@ function CollabCTA() {
                 background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.12)",
               }}
-              href="#"
+              href="./assets/monuResume.pdf"
               target="_blank"
             >
               <Download size={16} /> Download CV
