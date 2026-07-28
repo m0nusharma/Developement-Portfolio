@@ -61,7 +61,7 @@ const SKILLS: Skill[] = [
   { name: "CSS3", color: "#1572B6", tag: "C3" },
   { name: "Node.js", color: "#339933", tag: "No" },
   { name: "Express", color: "#aaaaaa", tag: "Ex" },
-  { name: "MongoDB", color: "#47A248", tag: "Mg" },
+  // { name: "MongoDB", color: "#47A248", tag: "Mg" },
   { name: "Git", color: "#F05032", tag: "Gt" },
   { name: "GitHub", color: "#cccccc", tag: "GH" },
   { name: "Figma", color: "#F24E1E", tag: "Fi" },
@@ -77,35 +77,47 @@ type Project = {
   tags: string[];
   img: string;
   featured: boolean;
+  liveUrl: string;
+  githubUrl: string;
+
 };
 const PROJECTS: Project[] = [
   {
     title: "NLD India Website",
     desc: "Comprehensive organizational portal with dynamic content management, event listings, and membership modules. Built with Angular and optimized for scale.",
-    tags: ["Angular", "TypeScript", "SCSS", "REST API"],
+    tags: ["Angular", "TypeScript", "SCSS",],
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=560&fit=crop&auto=format",
-    featured: true,
+     featured: true,
+     liveUrl: "https://www.nldindia.com/",
+     githubUrl:""
+
   },
   {
     title: "Portfolio 2026",
     desc: "This very portfolio — award-level design with 3D interactions, aurora animations, and immersive scroll storytelling.",
-    tags: ["React", "Three.js", "Framer Motion", "Tailwind"],
-    img: "https://images.unsplash.com/photo-1555099962-4199c17e2165?w=900&h=560&fit=crop&auto=format",
+    tags: ["React", "Framer Motion", "Tailwind"],
+    img: "https://storage.ghost.io/c/be/f2/bef2fe50-a0a2-464d-b3e5-1c155fe25c68/content/images/2021/08/no_templates_cover.png",
     featured: true,
+     liveUrl: "https://monu-portfolio-three.vercel.app/",
+    githubUrl:""
   },
   {
-    title: "Swiggy Clone",
-    desc: "Full-featured food delivery app with real-time cart management, restaurant search, and live API integration.",
-    tags: ["React", "Redux", "Tailwind"],
-    img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop&auto=format",
+    title: "Cryptocurrency",
+    desc: "A responsive crypto tracking platform showcasing live prices, market statistics, and interactive charts.",
+    tags: ["React", "Tailwind", "Rest API's"],
+    img: "https://tw.mitrade.com/cms_uploads/img/20260120/ba48fea4746c52515537e41205d8cd3a.jpg",
     featured: false,
+     liveUrl: "https://crypto-ui-monu.netlify.app/",
+    githubUrl:""
   },
   {
-    title: "Flipkart Clone",
+    title: "Social Media Dashboard",
     desc: "E-commerce platform with product browsing, cart, authentication and seamless checkout experience.",
-    tags: ["React", "Firebase", "CSS3"],
+    tags: ["HTML5", "CSS3"],
     img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&auto=format",
     featured: false,
+    liveUrl: "",
+    githubUrl:""
   },
   {
     title: "Home Service App UI",
@@ -113,13 +125,17 @@ const PROJECTS: Project[] = [
     tags: ["Figma", "React", "Tailwind"],
     img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&auto=format",
     featured: false,
+         liveUrl: "",
+    githubUrl:""
   },
   {
-    title: "Social Media UI",
+    title: "Flipkart",
     desc: "Sleek social platform with feed, stories, messaging and profile components — dark and light themes.",
     tags: ["React", "TypeScript", "Tailwind", "Framer Motion"],
     img: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop&auto=format",
     featured: false,
+    liveUrl: "https://playful-hotteok-30de19.netlify.app/",
+    githubUrl:""
   },
 ];
 
@@ -876,7 +892,7 @@ function About() {
                 border: "1px solid rgba(91,140,255,0.2)",
               }}
             >
-              <div className="text-2xl font-bold text-white">2+</div>
+              <div className="text-2xl font-bold text-white">1+</div>
               <div className="text-slate-400 text-xs">Years building UIs</div>
             </motion.div>
           </motion.div>
@@ -932,7 +948,7 @@ function About() {
               style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
               <Counter value={20} suffix="+" label="Projects" />
               <Counter value={15} suffix="+" label="Technologies" />
-              <Counter value={2} suffix="+" label="Years Exp." />
+              <Counter value={1} suffix="+" label="Years Exp." />
               <Counter value={500} suffix="+" label="GH Commits" />
             </div>
           </motion.div>
@@ -1160,14 +1176,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           className="flex gap-3"
         >
           <a
-            href="#"
+            href={project.liveUrl}
+            target="_blank"
             className="flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-xl text-white"
             style={{ background: "rgba(91,140,255,0.2)", border: "1px solid rgba(91,140,255,0.35)" }}
           >
             <ExternalLink size={13} /> Live Demo
           </a>
           <a
-            href="#"
+            href={project.githubUrl}
+            target="_blank"
             className="flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-xl text-slate-300"
             style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}
           >
@@ -1948,9 +1966,9 @@ function MarqueeTicker() {
 // ─── STATS STRIP ─────────────────────────────────────────────────────────────
 
 const STATS_DATA = [
-  { value: "20+", label: "Projects Shipped" },
-  { value: "18+", label: "Technologies" },
-  { value: "2+",  label: "Years of Experience" },
+  { value: "10+", label: "Projects Shipped" },
+  { value: "15+", label: "Technologies" },
+  { value: "1+",  label: "Years of Experience" },
   { value: "40%", label: "Avg. Performance Gain" },
   { value: "100%", label: "Client Satisfaction" },
 ];
