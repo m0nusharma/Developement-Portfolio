@@ -35,7 +35,7 @@ import {
 import Lenis from "lenis";
 import * as THREE from "three";
 import monu from "./assets/monu.png";
-import resume from "./assets/monuResume.pdf";
+import resume from "./assets/Monu_Sharma_Frontend_Developer.pdf";
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -141,32 +141,32 @@ const PROJECTS: Project[] = [
 
 const EXPERIENCE = [
   {
-    role: "Frontend Developer",
-    company: "Freelance · Self-employed",
-    period: "2022 – Present",
-    desc: "Crafting modern web applications for clients across India with a focus on React, Angular, and UI excellence. Delivered 20+ projects end-to-end.",
-    tags: ["React", "Angular", "TypeScript", "Tailwind"],
+    role: "Web Designer & Developer",
+    company: "NLD India Software Pvt. Ltd.",
+    period: "2025 – Present",
+    desc: "Designed and developed 5+ client projects, delivering modern, responsive web applications using React, Angular, and UI/UX best practices.",
+    tags: ["Angular" , "React", "TypeScript", "Bootstrap", "Tailwind", "RestAPI's", "figma" ],
   },
   {
-    role: "UI Designer & Web Developer",
-    company: "NLD India",
-    period: "2023 – Present",
-    desc: "Led the complete redesign and development of the NLD India website. Improved user engagement by 40% through modern design patterns and performance optimization.",
-    tags: ["Angular", "Figma", "SCSS", "REST API"],
-  },
-  {
-    role: "React Developer · Internship",
-    company: "Tech Startup",
-    period: "2022 – 2023",
-    desc: "Contributed to a SaaS product dashboard. Built a reusable component library and improved Lighthouse scores by 30+ points through lazy-loading and bundle optimization.",
-    tags: ["React", "Redux", "CSS Modules"],
-  },
+    role: "Graphic Artist",
+    company: "Fotograpix Pvt Ltd",
+    period: "2024 – 2024 6 Months",
+    desc: "Worked as a Graphic Artist on a 6-month contract, specializing in photo retouching, image editing, and graphic design using Adobe Photoshop and Illustrator.",
+    tags: ["Photoshop", "Retouch", "Illustrator"],
+  }
+  // {
+  //   role: "React Developer · Internship",
+  //   company: "Tech Startup",
+  //   period: "2022 – 2023",
+  //   desc: "Contributed to a SaaS product dashboard. Built a reusable component library and improved Lighthouse scores by 30+ points through lazy-loading and bundle optimization.",
+  //   tags: ["React", "Redux", "CSS Modules"],
+  // },
 ];
 
 const JOURNEY = [
   { label: "Frontend Foundations", detail: "HTML5, CSS3, JavaScript ES6+", done: true },
-  { label: "Advanced React", detail: "Hooks, Context, Redux, Next.js", done: true },
   { label: "Angular Development", detail: "Components, Services, RxJS, NgRx", done: true },
+  { label: "React", detail: "Hooks, Context, Redux, Next.js", done: true },
   { label: "Node.js & Express", detail: "REST APIs, Auth, Middleware", done: false, current: true },
   { label: "MongoDB & Databases", detail: "CRUD, Aggregation, Mongoose", done: false },
   { label: "Full Stack Engineer", detail: "MEAN / MERN · Cloud Deployment", done: false },
@@ -1379,164 +1379,164 @@ function Journey() {
 
 // ─── FIGMA SHOWCASE ───────────────────────────────────────────────────────────
 
-function FigmaShowcase() {
-  const [active, setActive] = useState(0);
-  const current = FIGMA_SHOWCASES[active];
+// function FigmaShowcase() {
+//   const [active, setActive] = useState(0);
+//   const current = FIGMA_SHOWCASES[active];
 
-  return (
-    <section className="relative py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <SectionTitle
-          label="Design"
-          title="Figma Showcase"
-          sub="UI designs crafted with purpose and precision."
-        />
+//   return (
+//     <section className="relative py-32 overflow-hidden">
+//       <div className="max-w-7xl mx-auto px-6">
+//         <SectionTitle
+//           label="Design"
+//           title="Figma Showcase"
+//           sub="UI designs crafted with purpose and precision."
+//         />
 
-        {/* Featured preview */}
-        <motion.div
-          className="relative rounded-3xl overflow-hidden mb-5 cursor-pointer"
-          style={{ height: 440 }}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={active}
-              src={current.img}
-              alt={current.title}
-              initial={{ opacity: 0, scale: 1.06 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.97 }}
-              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-              className="w-full h-full object-cover absolute inset-0"
-            />
-          </AnimatePresence>
+//         {/* Featured preview */}
+//         <motion.div
+//           className="relative rounded-3xl overflow-hidden mb-5 cursor-pointer"
+//           style={{ height: 440 }}
+//           initial={{ opacity: 0, y: 30 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true }}
+//         >
+//           <AnimatePresence mode="wait">
+//             <motion.img
+//               key={active}
+//               src={current.img}
+//               alt={current.title}
+//               initial={{ opacity: 0, scale: 1.06 }}
+//               animate={{ opacity: 1, scale: 1 }}
+//               exit={{ opacity: 0, scale: 0.97 }}
+//               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+//               className="w-full h-full object-cover absolute inset-0"
+//             />
+//           </AnimatePresence>
 
-          {/* Overlay gradient */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to top, rgba(5,8,22,0.92) 0%, rgba(5,8,22,0.3) 50%, transparent 100%)",
-            }}
-          />
+//           {/* Overlay gradient */}
+//           <div
+//             className="absolute inset-0"
+//             style={{
+//               background:
+//                 "linear-gradient(to top, rgba(5,8,22,0.92) 0%, rgba(5,8,22,0.3) 50%, transparent 100%)",
+//             }}
+//           />
 
-          {/* Label top-right */}
-          <div
-            className="absolute top-5 right-5 px-3 py-1.5 rounded-full text-xs font-medium text-slate-300"
-            style={{
-              background: "rgba(15,23,42,0.7)",
-              backdropFilter: "blur(12px)",
-              border: "1px solid rgba(255,255,255,0.1)",
-            }}
-          >
-            Figma · UI/UX Design
-          </div>
+//           {/* Label top-right */}
+//           <div
+//             className="absolute top-5 right-5 px-3 py-1.5 rounded-full text-xs font-medium text-slate-300"
+//             style={{
+//               background: "rgba(15,23,42,0.7)",
+//               backdropFilter: "blur(12px)",
+//               border: "1px solid rgba(255,255,255,0.1)",
+//             }}
+//           >
+//             Figma · UI/UX Design
+//           </div>
 
-          {/* Info bottom */}
-          <div className="absolute bottom-0 left-0 right-0 p-8">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={active}
-                initial={{ opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.35 }}
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <span
-                    className="text-xs px-2.5 py-1 rounded-full font-medium"
-                    style={{
-                      background: "rgba(91,140,255,0.2)",
-                      border: "1px solid rgba(91,140,255,0.35)",
-                      color: "#5B8CFF",
-                    }}
-                  >
-                    {active + 1} / {FIGMA_SHOWCASES.length}
-                  </span>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-1">{current.title}</h3>
-                <p className="text-slate-400 text-sm max-w-lg">{current.sub}</p>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </motion.div>
+//           {/* Info bottom */}
+//           <div className="absolute bottom-0 left-0 right-0 p-8">
+//             <AnimatePresence mode="wait">
+//               <motion.div
+//                 key={active}
+//                 initial={{ opacity: 0, y: 14 }}
+//                 animate={{ opacity: 1, y: 0 }}
+//                 exit={{ opacity: 0, y: -8 }}
+//                 transition={{ duration: 0.35 }}
+//               >
+//                 <div className="flex items-center gap-3 mb-2">
+//                   <span
+//                     className="text-xs px-2.5 py-1 rounded-full font-medium"
+//                     style={{
+//                       background: "rgba(91,140,255,0.2)",
+//                       border: "1px solid rgba(91,140,255,0.35)",
+//                       color: "#5B8CFF",
+//                     }}
+//                   >
+//                     {active + 1} / {FIGMA_SHOWCASES.length}
+//                   </span>
+//                 </div>
+//                 <h3 className="text-2xl font-bold text-white mb-1">{current.title}</h3>
+//                 <p className="text-slate-400 text-sm max-w-lg">{current.sub}</p>
+//               </motion.div>
+//             </AnimatePresence>
+//           </div>
+//         </motion.div>
 
-        {/* Thumbnail strip */}
-        <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-1">
-          {FIGMA_SHOWCASES.map((item, i) => (
-            <motion.button
-              key={i}
-              onClick={() => setActive(i)}
-              whileHover={{ scale: 1.05, y: -3 }}
-              whileTap={{ scale: 0.97 }}
-              className="relative flex-none rounded-2xl overflow-hidden"
-              style={{
-                width: 140,
-                height: 90,
-                border:
-                  active === i
-                    ? "2px solid rgba(91,140,255,0.7)"
-                    : "1px solid rgba(255,255,255,0.07)",
-                boxShadow:
-                  active === i ? "0 0 24px rgba(91,140,255,0.25)" : "none",
-                transition: "border 0.2s, box-shadow 0.2s",
-              }}
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="w-full h-full object-cover"
-              />
-              <div
-                className="absolute inset-0 transition-opacity duration-200"
-                style={{
-                  background: active === i ? "rgba(91,140,255,0.12)" : "rgba(5,8,22,0.35)",
-                }}
-              />
-              {/* Active underline */}
-              {active === i && (
-                <motion.div
-                  layoutId="thumb-active"
-                  className="absolute bottom-0 left-0 right-0 h-0.5"
-                  style={{
-                    background: "linear-gradient(to right, #5B8CFF, #7C3AED)",
-                  }}
-                />
-              )}
-            </motion.button>
-          ))}
-        </div>
+//         {/* Thumbnail strip */}
+//         <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-1">
+//           {FIGMA_SHOWCASES.map((item, i) => (
+//             <motion.button
+//               key={i}
+//               onClick={() => setActive(i)}
+//               whileHover={{ scale: 1.05, y: -3 }}
+//               whileTap={{ scale: 0.97 }}
+//               className="relative flex-none rounded-2xl overflow-hidden"
+//               style={{
+//                 width: 140,
+//                 height: 90,
+//                 border:
+//                   active === i
+//                     ? "2px solid rgba(91,140,255,0.7)"
+//                     : "1px solid rgba(255,255,255,0.07)",
+//                 boxShadow:
+//                   active === i ? "0 0 24px rgba(91,140,255,0.25)" : "none",
+//                 transition: "border 0.2s, box-shadow 0.2s",
+//               }}
+//             >
+//               <img
+//                 src={item.img}
+//                 alt={item.title}
+//                 className="w-full h-full object-cover"
+//               />
+//               <div
+//                 className="absolute inset-0 transition-opacity duration-200"
+//                 style={{
+//                   background: active === i ? "rgba(91,140,255,0.12)" : "rgba(5,8,22,0.35)",
+//                 }}
+//               />
+//               {/* Active underline */}
+//               {active === i && (
+//                 <motion.div
+//                   layoutId="thumb-active"
+//                   className="absolute bottom-0 left-0 right-0 h-0.5"
+//                   style={{
+//                     background: "linear-gradient(to right, #5B8CFF, #7C3AED)",
+//                   }}
+//                 />
+//               )}
+//             </motion.button>
+//           ))}
+//         </div>
 
-        {/* Prev / Next arrows */}
-        <div className="flex gap-3 justify-end mt-5">
-          {(["←", "→"] as const).map((arrow, dir) => (
-            <motion.button
-              key={arrow}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.93 }}
-              onClick={() =>
-                setActive((a) =>
-                  dir === 0
-                    ? (a - 1 + FIGMA_SHOWCASES.length) % FIGMA_SHOWCASES.length
-                    : (a + 1) % FIGMA_SHOWCASES.length
-                )
-              }
-              className="w-10 h-10 rounded-full flex items-center justify-center text-slate-400 hover:text-white transition-colors"
-              style={{
-                background: "rgba(255,255,255,0.05)",
-                border: "1px solid rgba(255,255,255,0.09)",
-              }}
-            >
-              {arrow}
-            </motion.button>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+//         {/* Prev / Next arrows */}
+//         <div className="flex gap-3 justify-end mt-5">
+//           {(["←", "→"] as const).map((arrow, dir) => (
+//             <motion.button
+//               key={arrow}
+//               whileHover={{ scale: 1.1 }}
+//               whileTap={{ scale: 0.93 }}
+//               onClick={() =>
+//                 setActive((a) =>
+//                   dir === 0
+//                     ? (a - 1 + FIGMA_SHOWCASES.length) % FIGMA_SHOWCASES.length
+//                     : (a + 1) % FIGMA_SHOWCASES.length
+//                 )
+//               }
+//               className="w-10 h-10 rounded-full flex items-center justify-center text-slate-400 hover:text-white transition-colors"
+//               style={{
+//                 background: "rgba(255,255,255,0.05)",
+//                 border: "1px solid rgba(255,255,255,0.09)",
+//               }}
+//             >
+//               {arrow}
+//             </motion.button>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 // ─── WHY ME ───────────────────────────────────────────────────────────────────
 
@@ -2266,7 +2266,7 @@ export default function App() {
         <Divider />
         <Journey />
         <Divider />
-        <FigmaShowcase />
+        {/* <FigmaShowcase /> */}
         <Divider />
         <WhyMe />
         <Divider />
